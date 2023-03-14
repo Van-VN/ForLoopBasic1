@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="numberLoop()">Bấm để bắt đầu bài "The number is N"</button>
+<div id="result"></div>
+<input type="number" min="0" id="getNum" step="1" placeholder="Nhập số nguyên">
+<button onclick="totalSum()">Bấm để bắt đầu bài tính tổng</button>
+</body>
+</html>
+<script>
+
+    function numberLoop() {
+        for (let n = 0; n <= 5; n++) {
+            console.log(n);
+            document.getElementById('result').innerHTML += n;
+        }
+    }
+
+    function totalSum() {
+        let num = document.getElementById('getNum').value;
+        let sum = 0;
+        if (num % 1 !== 0) {
+            alert("Nhập lại số nguyên dương N")
+        } else {
+            for (let i = 0; i <= num; i++) {
+                sum = sum + i;
+            }
+        }
+        alert("Tổng của các số từ 0 tới số vừa nhập là: " + sum);
+    }
+
+    // Viết chương trình nhập vào một số bất kỳ lớn hơn 0.
+    // Tính tổng các phần tử từ 1 đến số vừa nhập vào.
+
+    // Viết chương trình hiển thị chuỗi “The number is N” 5
+    // lần sử dụng vòng lặp for. Với N sẽ hiển thị từ 0 đến 5.
+</script>
